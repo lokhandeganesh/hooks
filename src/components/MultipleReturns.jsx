@@ -33,16 +33,16 @@ const MultipleReturns = () => {
   if (isLoading) { return (<h2>Loading .....</h2>) };
   if (isError) { return (<h2>There was an error .....</h2>) };
 
-  // const { name, avatar_url, login, html_url } = user;
+  const { name, avatar_url, login, bio, html_url } = user;
   return (
     <section>
       {/* Because user is object now and not list we will access the details using dot method */}
-      <h2>{user.name}</h2>
+      <h2>{name}</h2>
       <div>
-        <img src={user.avatar_url} alt="" style={{ width: '150px', borderRadius: '25px' }} />
-        <h5>User Name: {user.login}</h5>
-        <p>{user.bio}</p>
-        <a href={user.html_url}>Visit to Profile</a>
+        <img src={avatar_url} alt="" style={{ width: '150px', borderRadius: '25px' }} />
+        <h5>User Name: {login}</h5>
+        <p>{bio}</p>
+        <a href={html_url}>Visit to Profile</a>
       </div>
     </section>
   )
