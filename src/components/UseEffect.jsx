@@ -1,39 +1,53 @@
 import { React, useState, useEffect } from "react";
 
+const url = 'https://api.github.com/users'
 
-const UseEffectBasics = () => {
-  const [value, setValue] = useState(0);
-  const [secValue, setSecValue] = useState(0);
+const FetchData = () => {
+  const [users, setUsers] = useState([]);
 
-  // useEffect(callbackFunction, params)
-  // useEffect(() => {
-  //   console.log('Hello There')
-  // }, [])
-  //  only invoked on initial render
+  const fetchUsers =
+    async () => {
+      try {
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setUsers(data);
+        // console.log(data)
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
 
-  //
   useEffect(() => {
-    console.log('Hello There, from first useEffect')
-  }, [value])
-  //
-
-  useEffect(() => {
-    console.log('Hello There, from second useEffect')
-  }, [secValue])
-  //  only invoked on initial render
+    fetchUsers()
+  }, []);
 
   return (
-    <div>
-      <h1>value : {value}</h1>
-      <button className='btn' onClick={() => setValue(value + 1)}>
-        value
-      </button>
-      <h1>second value : {secValue}</h1>
-      <button className='btn' onClick={() => setSecValue(secValue + 1)}>
-        second value
-      </button>
-    </div>
+    <section>
+      <h3>github users</h3>
+      <ul className='users'>
+        {
+          users.map((user) => {
+            const { avatar_url, events_url, followers_url, following_url, gists_url,
+              gravatar_id, html_url, id, login, node_id, organizations_url, received_events_url,
+              repos_url, site_admin, starred_url, subscriptions_url, type, git_url } = user
+
+            return (
+              <li key={id}>
+                <img src={avatar_url} alt={login} />
+                <div>
+                  <h5>{login}</h5>
+                  <a href={html_url}>Profile</a>
+                </div>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </section>
   );
 }
 
-export default UseEffectBasics;
+export default FetchData;
