@@ -4,7 +4,7 @@ import ErrorExample from './components/ErrorExample';
 import UseStateArray from './components/UseStateArray';
 import UseStateObject from './components/UseStateObject';
 import UseEffect from './components/UseEffect';
-
+import MultipleReturns from './components/MultipleReturns';
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
         {/* <ErrorExample></ErrorExample> */}
         {/* <UseStateArray></UseStateArray> */}
         {/* <UseStateObject></UseStateObject> */}
-        <UseEffect></UseEffect>
+        {/* <UseEffect></UseEffect> */}
+        <MultipleReturns></MultipleReturns>
         {/* <Final></Final> */}
       </div>
     </React.Fragment>
