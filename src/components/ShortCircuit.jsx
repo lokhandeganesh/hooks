@@ -22,6 +22,10 @@ const ShortCircuit = () => {
       )} */}
 
       {user && <NameComponent name={user.name}></NameComponent>}
+
+      <h2>Ternary Operator</h2>
+      <button className="btn">{isEditing ? 'Edit' : 'Add'}</button>
+      {user ? <div><h2>Hello {name}</h2></div> : <div><h2>Please Login!!</h2></div>}
     </div>
   )
 };
