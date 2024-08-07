@@ -5,6 +5,7 @@ import UseStateArray from './components/UseStateArray';
 import UseStateObject from './components/UseStateObject';
 import UseEffect from './components/UseEffect';
 import MultipleReturns from './components/MultipleReturns';
+import ShortCircuit from './components/ShortCircuit';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
         {/* <UseStateArray></UseStateArray> */}
         {/* <UseStateObject></UseStateObject> */}
         {/* <UseEffect></UseEffect> */}
-        <MultipleReturns></MultipleReturns>
+        {/* <MultipleReturns></MultipleReturns> */}
+        <ShortCircuit></ShortCircuit>
         {/* <Final></Final> */}
       </div>
     </React.Fragment>
