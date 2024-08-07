@@ -7,6 +7,7 @@ import UseEffect from './components/UseEffect';
 import MultipleReturns from './components/MultipleReturns';
 import ShortCircuit from './components/ShortCircuit';
 import Toggle from './components/Toggle';
+import User from './components/UserChallenge';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         {/* <UseEffect></UseEffect> */}
         {/* <MultipleReturns></MultipleReturns> */}
         {/* <ShortCircuit></ShortCircuit> */}
-        <Toggle></Toggle>
+        {/* <Toggle></Toggle> */}
+        <User></User>
         {/* <Final></Final> */}
       </div>
     </React.Fragment>
