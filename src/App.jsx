@@ -6,6 +6,7 @@ import UseStateObject from './components/UseStateObject';
 import UseEffect from './components/UseEffect';
 import MultipleReturns from './components/MultipleReturns';
 import ShortCircuit from './components/ShortCircuit';
+import Toggle from './components/Toggle';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         {/* <UseStateObject></UseStateObject> */}
         {/* <UseEffect></UseEffect> */}
         {/* <MultipleReturns></MultipleReturns> */}
-        <ShortCircuit></ShortCircuit>
+        {/* <ShortCircuit></ShortCircuit> */}
+        <Toggle></Toggle>
         {/* <Final></Final> */}
       </div>
     </React.Fragment>
