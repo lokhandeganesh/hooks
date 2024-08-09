@@ -11,6 +11,7 @@ import User from './components/UserChallenge';
 import Navbar from './components/navbar';
 import { Home, About } from './components/pages'
 import Group from './components/group';
+import List from './components/List';
 function App() {
   return (
     <React.Fragment>
@@ -25,9 +26,10 @@ function App() {
         {/* <User></User> */}
         {/* <Navbar></Navbar> */}
         {/* <Final></Final> */}
-        <Home></Home>
-        <About></About>
-        <Group></Group>
+        {/* <Home></Home> */}
+        {/* <About></About> */}
+        {/* <Group></Group> */}
+        <List></List>
       </div>
     </React.Fragment>
   );
