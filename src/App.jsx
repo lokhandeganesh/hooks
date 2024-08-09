@@ -10,6 +10,7 @@ import Toggle from './components/Toggle';
 import User from './components/UserChallenge';
 import Navbar from './components/navbar';
 import { Home, About } from './components/pages'
+import Group from './components/group';
 function App() {
   return (
     <React.Fragment>
@@ -26,6 +27,7 @@ function App() {
         {/* <Final></Final> */}
         <Home></Home>
         <About></About>
+        <Group></Group>
       </div>
     </React.Fragment>
   );
