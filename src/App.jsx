@@ -9,7 +9,7 @@ import ShortCircuit from './components/ShortCircuit';
 import Toggle from './components/Toggle';
 import User from './components/UserChallenge';
 import Navbar from './components/navbar';
-
+import { Home, About } from './components/pages'
 function App() {
   return (
     <React.Fragment>
@@ -22,8 +22,10 @@ function App() {
         {/* <ShortCircuit></ShortCircuit> */}
         {/* <Toggle></Toggle> */}
         {/* <User></User> */}
-        <Navbar></Navbar>
+        {/* <Navbar></Navbar> */}
         {/* <Final></Final> */}
+        <Home></Home>
+        <About></About>
       </div>
     </React.Fragment>
   );
