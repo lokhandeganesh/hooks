@@ -8,6 +8,7 @@ import MultipleReturns from './components/MultipleReturns';
 import ShortCircuit from './components/ShortCircuit';
 import Toggle from './components/Toggle';
 import User from './components/UserChallenge';
+import Navbar from './components/navbar';
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
         {/* <MultipleReturns></MultipleReturns> */}
         {/* <ShortCircuit></ShortCircuit> */}
         {/* <Toggle></Toggle> */}
-        <User></User>
+        {/* <User></User> */}
+        <Navbar></Navbar>
         {/* <Final></Final> */}
       </div>
     </React.Fragment>
