@@ -13,7 +13,8 @@ import { Home, About } from './components/pages'
 import Group from './components/group';
 import List from './components/List';
 import ControlInput from './components/form/ControlInput';
-import MultipleInputs from './components/form/MultipleInputs';
+// import MultipleInputs from './components/form/MultipleInputs';
+import OtherInput from './components/form/OtherInput';
 
 function App() {
   return (
@@ -34,7 +35,8 @@ function App() {
         {/* <Group></Group> */}
         {/* <List></List> */}
         {/* <ControlInput></ControlInput> */}
-        <MultipleInputs></MultipleInputs>
+        {/* <MultipleInputs></MultipleInputs> */}
+        <OtherInput></OtherInput>
       </div>
     </React.Fragment>
   );
