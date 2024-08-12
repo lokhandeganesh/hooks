@@ -16,6 +16,7 @@ import ControlInput from './components/form/ControlInput';
 // import MultipleInputs from './components/form/MultipleInputs';
 import OtherInput from './components/form/OtherInput';
 import FormDataApi from './components/form/FormDataApi';
+import UseRefBasics from './components/useRefBasic/UseRefBasics';
 
 function App() {
   return (
@@ -38,7 +39,8 @@ function App() {
         {/* <ControlInput></ControlInput> */}
         {/* <MultipleInputs></MultipleInputs> */}
         {/* <OtherInput></OtherInput> */}
-        <FormDataApi></FormDataApi>
+        {/* <FormDataApi></FormDataApi> */}
+        <UseRefBasics></UseRefBasics>
       </div>
     </React.Fragment>
   );
