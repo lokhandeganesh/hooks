@@ -15,6 +15,7 @@ import List from './components/List';
 import ControlInput from './components/form/ControlInput';
 // import MultipleInputs from './components/form/MultipleInputs';
 import OtherInput from './components/form/OtherInput';
+import FormDataApi from './components/form/FormDataApi';
 
 function App() {
   return (
@@ -36,7 +37,8 @@ function App() {
         {/* <List></List> */}
         {/* <ControlInput></ControlInput> */}
         {/* <MultipleInputs></MultipleInputs> */}
-        <OtherInput></OtherInput>
+        {/* <OtherInput></OtherInput> */}
+        <FormDataApi></FormDataApi>
       </div>
     </React.Fragment>
   );
