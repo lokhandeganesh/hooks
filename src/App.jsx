@@ -12,6 +12,8 @@ import Navbar from './components/navbar';
 import { Home, About } from './components/pages'
 import Group from './components/group';
 import List from './components/List';
+import ControlInput from './components/form/ControlInput';
+
 function App() {
   return (
     <React.Fragment>
@@ -29,7 +31,8 @@ function App() {
         {/* <Home></Home> */}
         {/* <About></About> */}
         {/* <Group></Group> */}
-        <List></List>
+        {/* <List></List> */}
+        <ControlInput></ControlInput>
       </div>
     </React.Fragment>
   );
