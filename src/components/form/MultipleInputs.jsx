@@ -1,4 +1,5 @@
 import { React, useState } from 'react'
+import bcrypt from 'bcryptjs'
 
 const MultipleInputs = () => {
   const [user, setUser] = useState({ name: '', email: '', password: '' });
@@ -7,9 +8,18 @@ const MultipleInputs = () => {
     // console.log(e.target.value)
     setUser({ ...user, [e.target.name]: e.target.value })
   }
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // console.log(user);
+
+    const hashedPassword = bcrypt.hashSync(user.password, 10);
+    // console.log(hashedPassword);
+  }
+
   return (
     <div>
-      <form className='form'>
+      <form className='form' onSubmit={handleSubmit}>
         <h4>Multiple Inputs</h4>
         {/* name */}
         <div className='form-row'>
