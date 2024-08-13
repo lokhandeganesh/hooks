@@ -1,10 +1,12 @@
 import React from 'react'
 import useFetchData from './useFetchData';
+import useFetch from '../useFetch'
 
 const url = 'https://api.github.com/users/lokhandeganesh';
 
 const FetchData = () => {
-  const { isLoading, isError, user } = useFetchData(url);
+  // const { isLoading, isError, user } = useFetchData(url);
+  const { isLoading, isError, data: user } = useFetch(url);
 
   if (isLoading) {
     return <h2>Loading...</h2>;
