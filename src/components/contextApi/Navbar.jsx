@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+import React, { createContext, useState } from 'react'
 import NavLinks from './NavLinks'
-import UserContainer from './UserContainer';
+
+export const NavbarContext = createContext();
 
 const Navbar = () => {
   const [user, setUser] = useState({ name: 'Ganesh' });
@@ -10,10 +11,12 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='navbar'>
-      <h5>Context API</h5>
-      <NavLinks user={user} logout={logout}></NavLinks>
-    </nav>
+    <NavbarContext.Provider value={{ user, logout }}>
+      <nav className='navbar'>
+        <h5>Context API</h5>
+        <NavLinks ></NavLinks>
+      </nav>
+    </NavbarContext.Provider>
   )
 }
 
