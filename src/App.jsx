@@ -18,6 +18,8 @@ import OtherInput from './components/form/OtherInput';
 import FormDataApi from './components/form/FormDataApi';
 import UseRefBasics from './components/useRefBasic/UseRefBasics';
 
+import ToggleCustom from './components/customHooks/Toggle';
+
 function App() {
   return (
     <React.Fragment>
@@ -40,7 +42,8 @@ function App() {
         {/* <MultipleInputs></MultipleInputs> */}
         {/* <OtherInput></OtherInput> */}
         {/* <FormDataApi></FormDataApi> */}
-        <UseRefBasics></UseRefBasics>
+        {/* <UseRefBasics></UseRefBasics> */}
+        <ToggleCustom></ToggleCustom>
       </div>
     </React.Fragment>
   );
