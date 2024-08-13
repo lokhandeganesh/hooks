@@ -21,10 +21,12 @@ import UseRefBasics from './components/useRefBasic/UseRefBasics';
 import ToggleCustom from './components/customHooks/Toggle';
 import FetchData from './components/customHooks/FetchData';
 
+import NavbarContext from './components/contextApi/Navbar';
+
 function App() {
   return (
     <React.Fragment>
-      <div className='container'>
+      <div className=''>
         {/* <ErrorExample></ErrorExample> */}
         {/* <UseStateArray></UseStateArray> */}
         {/* <UseStateObject></UseStateObject> */}
@@ -45,8 +47,9 @@ function App() {
         {/* <FormDataApi></FormDataApi> */}
         {/* <UseRefBasics></UseRefBasics> */}
         {/* <ToggleCustom></ToggleCustom> */}
-        <FetchData></FetchData>
+        {/* <FetchData></FetchData> */}
       </div>
+      <NavbarContext></NavbarContext>
     </React.Fragment>
   );
 }
