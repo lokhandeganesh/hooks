@@ -19,6 +19,7 @@ import FormDataApi from './components/form/FormDataApi';
 import UseRefBasics from './components/useRefBasic/UseRefBasics';
 
 import ToggleCustom from './components/customHooks/Toggle';
+import FetchData from './components/customHooks/FetchData';
 
 function App() {
   return (
@@ -43,7 +44,8 @@ function App() {
         {/* <OtherInput></OtherInput> */}
         {/* <FormDataApi></FormDataApi> */}
         {/* <UseRefBasics></UseRefBasics> */}
-        <ToggleCustom></ToggleCustom>
+        {/* <ToggleCustom></ToggleCustom> */}
+        <FetchData></FetchData>
       </div>
     </React.Fragment>
   );
