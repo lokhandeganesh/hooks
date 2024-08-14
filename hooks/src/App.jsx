@@ -25,7 +25,7 @@ import NavbarContext from './components/contextApi/Navbar';
 import ReducerBasic from './components/useReducer/useReducerBasic';
 
 import LowerState from './components/performance';
-
+import LowerStateChallenge from './tutorial/11-performance/starter/02-lower-state-challenge';
 function App() {
   return (
     <React.Fragment>
@@ -52,7 +52,8 @@ function App() {
         {/* <ToggleCustom></ToggleCustom> */}
         {/* <FetchData></FetchData> */}
         {/* <ReducerBasic></ReducerBasic> */}
-        <LowerState></LowerState>
+        {/* <LowerState></LowerState> */}
+        <LowerStateChallenge></LowerStateChallenge>
       </div>
       {/* <NavbarContext></NavbarContext> */}
     </React.Fragment>
