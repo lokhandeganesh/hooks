@@ -24,6 +24,8 @@ import FetchData from './components/customHooks/FetchData';
 import NavbarContext from './components/contextApi/Navbar';
 import ReducerBasic from './components/useReducer/useReducerBasic';
 
+import LowerState from './components/performance';
+
 function App() {
   return (
     <React.Fragment>
@@ -49,7 +51,8 @@ function App() {
         {/* <UseRefBasics></UseRefBasics> */}
         {/* <ToggleCustom></ToggleCustom> */}
         {/* <FetchData></FetchData> */}
-        <ReducerBasic></ReducerBasic>
+        {/* <ReducerBasic></ReducerBasic> */}
+        <LowerState></LowerState>
       </div>
       {/* <NavbarContext></NavbarContext> */}
     </React.Fragment>
