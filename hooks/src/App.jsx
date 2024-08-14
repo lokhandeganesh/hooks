@@ -24,8 +24,9 @@ import FetchData from './components/customHooks/FetchData';
 import NavbarContext from './components/contextApi/Navbar';
 import ReducerBasic from './components/useReducer/useReducerBasic';
 
-import LowerState from './components/performance';
+// import LowerState from './components/performance';
 import LowerStateChallenge from './tutorial/11-performance/starter/02-lower-state-challenge';
+import LowerState from './tutorial/11-performance/starter/03-hooks';
 function App() {
   return (
     <React.Fragment>
@@ -53,7 +54,8 @@ function App() {
         {/* <FetchData></FetchData> */}
         {/* <ReducerBasic></ReducerBasic> */}
         {/* <LowerState></LowerState> */}
-        <LowerStateChallenge></LowerStateChallenge>
+        {/* <LowerStateChallenge></LowerStateChallenge> */}
+        <LowerState></LowerState>
       </div>
       {/* <NavbarContext></NavbarContext> */}
     </React.Fragment>
