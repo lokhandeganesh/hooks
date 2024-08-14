@@ -1,17 +1,30 @@
 import React, { useState, useReducer } from 'react'
-import { data, people } from '../../data'
+import { data } from '../../data'
 
 const defaultState = {
   people: data,
   isLoading: false
 }
 
+const CLEAR_ITEM = 'CLEAR_ITEM'
+const RESET_ITEM = 'RESET_ITEM'
+const REMOVE_ITEM = 'REMOVE_ITEM'
+
 const reducer = (state, action) => {
   // console.log(action)
-  if (action.type === 'CLEAR_ITEM') {
+  if (action.type === CLEAR_ITEM) {
     return { ...state, people: [] };
   }
-
+  if (action.type === RESET_ITEM) {
+    return { ...state, people: data };
+  }
+  if (action.type === REMOVE_ITEM) {
+    // console.log(action);
+    let newPeople = state.people.filter((person) => person.id != action.payload.id);
+    return { ...state, people: newPeople };
+  }
+  // return state
+  throw new Error(`No matching "${action.type}" - action type`);
 }
 
 
@@ -23,18 +36,20 @@ const ReducerBasic = () => {
   const removeItem = (id) => {
     // let newPeople = people.filter((person) => person.id != id);
     // setPeople(newPeople);
+    dispatch({ type: REMOVE_ITEM, payload: { id } })
   };
 
   const clearItem = () => {
-    dispatch({ type: 'CLEAR_ITEM' })
     // setPeople([])
+    dispatch({ type: CLEAR_ITEM })
   };
 
   const resetItem = () => {
     // setPeople(data)
+    dispatch({ type: RESET_ITEM })
   };
 
-  console.log(state)
+  // console.log(state)
 
   return (
     <div>
@@ -44,7 +59,7 @@ const ReducerBasic = () => {
           return (
             <div key={id} className='item'>
               <h4>{name}</h4>
-              <button onClick={() => removeItem(id)}>remove</button>
+              <button className='btn' onClick={() => removeItem(id)}>Remove</button>
             </div>
           )
         })
@@ -55,14 +70,14 @@ const ReducerBasic = () => {
           (
             <button className='btn'
               style={{ marginTop: '2rem' }}
-              onClick={resetItem}>Reset</button>
+              onClick={resetItem}>Reset All</button>
           )
           :
           (
             <button
               className='btn'
               style={{ marginTop: '2rem' }}
-              onClick={clearItem}>Clear</button>
+              onClick={clearItem}>Clear All</button>
           )
       }
     </div >
