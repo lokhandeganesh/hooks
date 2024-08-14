@@ -22,11 +22,12 @@ import ToggleCustom from './components/customHooks/Toggle';
 import FetchData from './components/customHooks/FetchData';
 
 import NavbarContext from './components/contextApi/Navbar';
+import ReducerBasic from './components/useReducer/useReducerBasic';
 
 function App() {
   return (
     <React.Fragment>
-      <div className=''>
+      <div className='container'>
         {/* <ErrorExample></ErrorExample> */}
         {/* <UseStateArray></UseStateArray> */}
         {/* <UseStateObject></UseStateObject> */}
@@ -48,8 +49,9 @@ function App() {
         {/* <UseRefBasics></UseRefBasics> */}
         {/* <ToggleCustom></ToggleCustom> */}
         {/* <FetchData></FetchData> */}
+        <ReducerBasic></ReducerBasic>
       </div>
-      <NavbarContext></NavbarContext>
+      {/* <NavbarContext></NavbarContext> */}
     </React.Fragment>
   );
 }
