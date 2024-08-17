@@ -27,6 +27,8 @@ import ReducerBasic from './components/useReducer/useReducerBasic';
 // import LowerState from './components/performance';
 import LowerStateChallenge from './tutorial/11-performance/starter/02-lower-state-challenge';
 import LowerState from './tutorial/11-performance/starter/03-hooks';
+import LatestReact from './tutorial/11-performance/starter/04-react-18';
+
 function App() {
   return (
     <React.Fragment>
@@ -55,7 +57,8 @@ function App() {
         {/* <ReducerBasic></ReducerBasic> */}
         {/* <LowerState></LowerState> */}
         {/* <LowerStateChallenge></LowerStateChallenge> */}
-        <LowerState></LowerState>
+        {/* <LowerState></LowerState> */}
+        <LatestReact></LatestReact>
       </div>
       {/* <NavbarContext></NavbarContext> */}
     </React.Fragment>
