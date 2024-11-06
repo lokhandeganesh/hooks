@@ -1,0 +1,28 @@
+#info .info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 4px;
+}
+
+#info .info-content .amount {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#info .info-content .type {
+  font-family: Alegreya;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+#info .wrapper {
+  position: relative;
+}
+
+#info .bg-element-red {
+  position: absolute;
+  left: 0;
+  top: 0;
+}

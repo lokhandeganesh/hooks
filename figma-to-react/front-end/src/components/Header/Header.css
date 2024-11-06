@@ -1,0 +1,59 @@
+header {
+  min-height: 100vh;
+  background: url("../../assets/hero-image.png");
+  background-size: cover;
+  background-position: center;
+}
+
+header,
+.wrapper {
+  position: relative;
+  height: 100vh;
+}
+
+header .cta {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 450px;
+  border-radius: 20px 20px 0px 0px;
+  border-top: 4px solid #fff;
+  border-right: 4px solid #fff;
+  border-left: 4px solid #fff;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(25px);
+  padding: 50px 40px;
+}
+
+header .cta .course-name {
+  color: var(--white-color);
+  font-size: 16px;
+  font-weight: 800;
+  position: relative;
+}
+
+header .cta .course-name::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background-color: var(--red-color);
+  left: 0;
+  bottom: -10px;
+}
+
+header .cta h1 {
+  color: var(--white-color);
+  font-family: Alegreya;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+header .cta .demo-btn {
+  border-radius: 10px;
+  background: var(--red-color);
+  color: var(--white-color);
+  padding: 10px 32px;
+  font-size: 16px;
+  font-weight: 700;
+}
