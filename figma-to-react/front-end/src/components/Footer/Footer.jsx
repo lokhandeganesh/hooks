@@ -38,6 +38,7 @@ const Footer = () => {
               <li><a href="">+1 999 9999 999</a></li>
             </ul>
           </div>
+          <div className="copy-right mobile">This website is designed by GTCoding Ⓒ 2024</div>
         </div>
       </div>
     </footer>
