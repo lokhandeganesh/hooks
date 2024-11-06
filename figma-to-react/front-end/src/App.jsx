@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Topics, Info, Blog, Testimonials, Ftr } from './components'
+import { Header, Topics, Info, Blog, Testimonials, Footer } from './components'
 
 const App = () => {
   return (
@@ -9,7 +9,7 @@ const App = () => {
       <Info></Info>
       <Blog></Blog>
       <Testimonials></Testimonials>
-      <Ftr></Ftr>
+      <Footer></Footer>
     </>
 
   )
