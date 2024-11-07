@@ -1,22 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Blog.css"
 import { blogDaw, blogMixing, blogVox } from "../../assets"
+import { urlFor, client } from '../../client'
 
 const Blog = () => {
+  const [posts, setPosts] = useState([]);
+  useEffect(() => {
+    const query = '*[_type == "posts"]';
+    client.fetch(query).then((data) => {
+      setPosts(data);
+    })
+  }, [])
   return (
     <section id='blog' className='bg-pink-color'>
       <div className="wrapper">
         <h2 className='light'>Latest Posts</h2>
         <div className="content-container">
-          <div className="post">
-            <div className="tag">DAW</div>
-            <a href="#">
-              <img src={blogDaw} alt="" />
-            </a>
-            <a href="#">
-              <h3 className="post-title">How To Use Drum Machine in Logic Pro X</h3>
-            </a>
-          </div>
+          {
+            posts.map((post) => (
+              <div className="post">
+                <div className="tag">{post.label}</div>
+                <a href="#">
+                  <img src={urlFor(post.thumbnail)} alt="" />
+                </a>
+                <a href="#">
+                  <h3 className="post-title">{post.title}</h3>
+                </a>
+              </div>
+
+            ))
+          }
           <div className="post">
             <div className="tag">Mixing</div>
             <a href="#">
