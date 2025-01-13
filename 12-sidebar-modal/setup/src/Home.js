@@ -7,15 +7,15 @@ const Home = () => {
   // const data = useContext(AppContext);
 
   // imported from custom hook
-  const data = useGlobalContext();
-  console.log(data);
+  const { openSidebar, openModal } = useGlobalContext();
+  // console.log(data);
 
   return (
     <main>
-      <button className="sidebar-toggle">
+      <button className="sidebar-toggle" onClick={openSidebar}>
         <FaBars></FaBars>
       </button>
-      <button className="btn">
+      <button className="btn" onClick={openModal}>
         show modal
       </button>
     </main>
